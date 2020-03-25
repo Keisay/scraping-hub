@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <div class="row">
+        <p>{{ search1 }}</p>
+        <p>{{ search2 }}</p>
+        <p>{{ search3 }}</p>
+        <p>{{ search4 }}</p>
+        <p>{{ search5 }}</p>
+    </div>
+
+    {% for post in fou %}
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="card-panel grey lighten-5 z-depth-1">
+              <div class="row valign-wrapper">
+                <div class="col s2">
+                  <img src="{% static "webscraping/jamesking.jpg" %}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                </div>
+                <div class="col s10">
+                  <span class="black-text">
+                    <a href="{{ post.0 }}">View</a>
+                    {{ post.1 }}
+                  </span>
+                </div>
+              </div>
+            </div>
+          </div>
+    {% endfor %}
+
+    {% for post in brute %}
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                <img src="{% static "webscraping/newtoncam.jpg" %}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                </div>
+                <div class="col s10">
+                <span class="black-text">
+                    <a href="{{ post.0 }}">View</a>
+                    {{ post.1 }}
+                </span>
+                </div>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+
+    {% for post in radar %}
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                <img src="{% static "webscraping/animalcrossing.png" %}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                </div>
+                <div class="col s10">
+                <span class="black-text">
+                    <a href="{{ post.0 }}">View</a>
+                    {{ post.1 }}
+                </span>
+                </div>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% for post in reviews %}
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                <img src="{% static "webscraping/kratosthebest.jpg" %}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                </div>
+                <div class="col s10">
+                <span class="black-text">
+                    <a href="{{ post.0 }}">View</a>
+                    {{ post.1 }}
+                </span>
+                </div>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+    {% for post in indie %}
+        <div class="col s12 m8 offset-m2 l6 offset-l3">
+            <div class="card-panel grey lighten-5 z-depth-1">
+            <div class="row valign-wrapper">
+                <div class="col s2">
+                <img src="{% static "webscraping/chomsky.jpg" %}" alt="" class="circle responsive-img"> <!-- notice the "circle" class -->
+                </div>
+                <div class="col s10">
+                <span class="black-text">
+                    <a href="{{ post.0 }}">View</a>
+                    {{ post.1 }}
+                </span>
+                </div>
+            </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
