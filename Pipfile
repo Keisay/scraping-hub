@@ -10,6 +10,7 @@ django = "*"
 requests = "*"
 gunicorn = "*"
 bs4 = "*"
+whitenoise = "*"
 
 [requires]
 python_version = "3.7"
