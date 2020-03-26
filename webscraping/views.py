@@ -18,7 +18,7 @@ def home(request):
 
 def new_search(request):
     search = request.POST.get('search')
-    models.Search.objects.create(search=search,blank=True,null=True)
+    models.Search.objects.create(search=search,null=True)
 
     if search == "bleacher nba":
         page_url = requests.get(url)
