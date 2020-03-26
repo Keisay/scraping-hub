@@ -16,9 +16,9 @@ url4 = 'https://www.indiewire.com/'
 def home(request):
     return render(request, 'base.html')
 
-def new_search(request):
+def new_search(request, null=True):
     search = request.POST.get('search')
-    models.Search.objects.create(search=search)
+    x = models.Search.objects.create(search=search)
 
     if search == "bleacher nba":
         page_url = requests.get(url)
